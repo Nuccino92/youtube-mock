@@ -1,0 +1,33 @@
+.sidebar {
+  float: left;
+  min-height: 100vh;
+  min-width: 12vw;
+}
+
+.sidebar-inner {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bolder;
+  text-decoration: none;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  padding: 12px 0 12px 20px;
+}
+
+.sidebar-inner:hover {
+  background-color: rgba(197, 197, 197, 0.25);
+}
+
+.sidebar-inner > span {
+  display: flex;
+  align-content: center;
+  padding-left: 20px;
+}
+
+.second-sidebar-container {
+  padding: 12px 0;
+  margin: 12px 0;
+  border-top: 0.7px solid rgb(204, 204, 204, 0.5);
+  border-bottom: 0.7px solid rgb(204, 204, 204, 0.5);
+}
