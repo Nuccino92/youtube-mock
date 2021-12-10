@@ -3,14 +3,17 @@ import { FaRegCompass } from "react-icons/fa";
 import { BsCollectionPlay } from "react-icons/bs";
 import { MdOutlineVideoLibrary } from "react-icons/md";
 import { VscHistory } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 const LoggedOutSidebarSmall = () => {
   return (
     <div>
-      <div className="sidebar-small-inner">
-        <MdHome />
-        <h5>Home</h5>
-      </div>
+      <Link to="/">
+        <div className="sidebar-small-inner">
+          <MdHome />
+          <h5>Home</h5>
+        </div>
+      </Link>
       <div className="sidebar-small-inner">
         <FaRegCompass />
         <h5>Explore</h5>
