@@ -5,47 +5,51 @@ import { MdOutlineVideoLibrary, MdPlaylistAddCheck } from "react-icons/md";
 import { VscHistory } from "react-icons/vsc";
 import { AiOutlinePlaySquare } from "react-icons/ai";
 import { FiThumbsUp } from "react-icons/fi";
+import { Link } from "react-router-dom";
+
 const LoggedInSidebar = () => {
   return (
-    <div>
+    <div className="sidebar">
       <div>
         <div className="first-sidebar-container">
+          <Link to="/">
+            <div className="sidebar-inner">
+              <MdHome size={22} />
+              <span>Home</span>
+            </div>
+          </Link>
           <div className="sidebar-inner">
-            <MdHome />
-            <span>Home</span>
+            <FaRegCompass size={22} />
+            <span>Explore</span>
           </div>
           <div className="sidebar-inner">
-            <FaRegCompass />
-            <span>Expore</span>
-          </div>
-          <div className="sidebar-inner">
-            <BsCollectionPlay />
+            <BsCollectionPlay size={22} />
             <span>Subscriptions</span>
           </div>
         </div>
         <div className="second-sidebar-container">
           <div className="sidebar-inner">
-            <MdOutlineVideoLibrary />
+            <MdOutlineVideoLibrary size={22} />
             <span>Library</span>
           </div>
           <div className="sidebar-inner">
-            <VscHistory />
+            <VscHistory size={22} />
             <span>History</span>
           </div>
           <div className="sidebar-inner">
-            <AiOutlinePlaySquare />
+            <AiOutlinePlaySquare size={22} />
             <span>Your videos</span>
           </div>
           <div className="sidebar-inner">
-            <BsClock />
+            <BsClock size={22} />
             <span>Watch later</span>
           </div>
           <div className="sidebar-inner">
-            <FiThumbsUp />
+            <FiThumbsUp size={22} />
             <span>Liked videos</span>
           </div>
           <div className="sidebar-inner">
-            <MdPlaylistAddCheck />
+            <MdPlaylistAddCheck size={22} />
             <span>Favorites</span>
           </div>
         </div>
