@@ -1,0 +1,23 @@
+.small-sidebar {
+  float: left;
+  min-height: 100vh;
+  min-width: 3vw;
+}
+
+.sidebar-small-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.sidebar-small-inner:hover {
+  background-color: rgba(197, 197, 197, 0.25);
+}
+
+.sidebar-small-inner > h5 {
+  margin-top: 5px;
+}
