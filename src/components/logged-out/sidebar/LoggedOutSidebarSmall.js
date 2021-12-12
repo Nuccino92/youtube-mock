@@ -7,30 +7,34 @@ import { Link } from "react-router-dom";
 
 const LoggedOutSidebarSmall = () => {
   return (
-    <div>
+    <div className="small-sidebar">
       <Link to="/">
         <div className="sidebar-small-inner">
-          <MdHome />
+          <MdHome style={style} size={22} />
           <h5>Home</h5>
         </div>
       </Link>
       <div className="sidebar-small-inner">
-        <FaRegCompass />
+        <FaRegCompass size={22} />
         <h5>Explore</h5>
       </div>
       <div className="sidebar-small-inner">
-        <BsCollectionPlay />
+        <BsCollectionPlay size={22} />
         <h5>Subscriptions</h5>
       </div>
       <div className="sidebar-small-inner">
-        <MdOutlineVideoLibrary />
+        <MdOutlineVideoLibrary size={22} />
         <h5>Library</h5>
       </div>
       <div className="sidebar-small-inner">
-        <VscHistory />
+        <VscHistory size={22} />
         <h5>History</h5>
       </div>
     </div>
   );
+};
+
+const style = {
+  alignSelf: "center",
 };
 export default LoggedOutSidebarSmall;
