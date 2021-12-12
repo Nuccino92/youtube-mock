@@ -6,23 +6,23 @@ import { Link } from "react-router-dom";
 
 const LoggedInSidebarSmall = () => {
   return (
-    <div>
+    <div className="small-sidebar">
       <Link to="/">
         <div className="sidebar-small-inner">
-          <MdHome />
+          <MdHome size={22} />
           <h5>Home</h5>
         </div>
       </Link>
       <div className="sidebar-small-inner">
-        <FaRegCompass />
+        <FaRegCompass size={22} />
         <h5>Explore</h5>
       </div>
       <div className="sidebar-small-inner">
-        <BsCollectionPlay />
+        <BsCollectionPlay size={22} />
         <h5>Subscriptions</h5>
       </div>
       <div className="sidebar-small-inner">
-        <MdOutlineVideoLibrary />
+        <MdOutlineVideoLibrary size={22} />
         <h5>Library</h5>
       </div>
     </div>
