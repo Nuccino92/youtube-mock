@@ -106,7 +106,7 @@
   align-self: center;
 }
 
-.right-header-container > *:active {
+.right-header-container > *:active:not(button, .profile-picture) {
   box-shadow: 0 0 0 8px rgb(228, 228, 228);
   border-radius: 50%;
   background-color: rgb(228, 228, 228);
@@ -121,6 +121,19 @@
   color: rgb(6, 95, 212);
   padding: 10px 20px;
   font-weight: 600;
+  background-color: white;
+}
+
+.profile-picture {
+  height: 32px;
+  width: 32px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.profile-picture:active {
+  outline: 1px solid blue;
 }
 
 @media (max-width: 740px) {
