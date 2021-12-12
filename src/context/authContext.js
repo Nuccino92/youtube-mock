@@ -54,6 +54,7 @@ const AuthContextProvider = (props) => {
     signOut(auth).catch((error) => {
       console.log(error.message);
     });
+    sessionStorage.removeItem("user-profile");
   };
 
   onAuthStateChanged(auth, (user) => {
