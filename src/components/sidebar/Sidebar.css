@@ -12,7 +12,7 @@
   display: flex;
   vertical-align: middle;
   align-items: center;
-  padding: 12px 0 12px 20px;
+  padding: 12px 0 12px 29px;
 }
 
 .sidebar-inner:hover {
@@ -30,4 +30,22 @@
   margin: 12px 0;
   border-top: 0.7px solid rgb(204, 204, 204, 0.5);
   border-bottom: 0.7px solid rgb(204, 204, 204, 0.5);
+}
+
+/* sign in div for logged out sidebar */
+.third-sidebar-container {
+  font-size: 14px;
+  padding: 8px 31px;
+  color: black;
+  font-weight: bolder;
+  border-bottom: 0.7px solid rgb(204, 204, 204);
+}
+
+.third-sidebar-container > p {
+  margin: 4px 0;
+}
+
+.third-sidebar-container > button {
+  margin: 10px 0;
+  background-color: white;
 }
