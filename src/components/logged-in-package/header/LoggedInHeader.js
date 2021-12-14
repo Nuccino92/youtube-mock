@@ -7,13 +7,21 @@ import { TiMicrophone } from "react-icons/ti";
 import { BsGrid3X3Gap } from "react-icons/bs";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../context/authContext";
 import youtubeIcon from "/home/anthony/the_odin_project/youtube-mock/src/components/header/youtube-icon.png";
 
-const LoggedInHeader = () => {
+const LoggedInHeader = ({ handleSidebar }) => {
+  const { profile } = useContext(AuthContext);
+
   return (
     <div className="header">
       <div className="left-header-container">
-        <AiOutlineMenu size={20} className="header-menu-icon" />
+        <AiOutlineMenu
+          onClick={handleSidebar}
+          size={20}
+          className="header-menu-icon"
+        />
         <div className="youtube-menu-icon-container">
           <Link to="/">
             <img
@@ -45,7 +53,10 @@ const LoggedInHeader = () => {
         <AiOutlineVideoCameraAdd title="Create" size={23} />
         <BsGrid3X3Gap title="YouTube Apps" size={20} />
         <IoIosNotificationsOutline title="Notifications" size={27} />
-        <div className="profile-picture">Picture</div>
+        <div
+          style={{ backgroundImage: `url(${profile.photo})` }}
+          className="profile-picture"
+        ></div>
       </div>
     </div>
   );

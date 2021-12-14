@@ -3,12 +3,19 @@ import { TiMicrophone } from "react-icons/ti";
 import { BsGrid3X3Gap, BsThreeDotsVertical } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import youtubeIcon from "/home/anthony/the_odin_project/youtube-mock/src/components/header/youtube-icon.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../context/authContext";
 
-const LoggedOutHeader = () => {
+const LoggedOutHeader = ({ handleSidebar }) => {
+  const { logIn } = useContext(AuthContext);
   return (
     <div className="header">
       <div className="left-header-container">
-        <AiOutlineMenu size={20} className="header-menu-icon" />
+        <AiOutlineMenu
+          onClick={handleSidebar}
+          size={20}
+          className="header-menu-icon"
+        />
         <div className="youtube-menu-icon-container">
           <Link to="/">
             <img
@@ -39,7 +46,9 @@ const LoggedOutHeader = () => {
       <div className="right-header-container">
         <BsGrid3X3Gap size={20} title="YouTube Apps" />
         <BsThreeDotsVertical size={20} title="Settings" />
-        <button className="sign-in-header-btn">SIGN IN</button>
+        <button onClick={logIn} className="sign-in-header-btn">
+          SIGN IN
+        </button>
       </div>
     </div>
   );

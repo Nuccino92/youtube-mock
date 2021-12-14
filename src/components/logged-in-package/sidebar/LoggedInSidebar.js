@@ -6,8 +6,12 @@ import { VscHistory } from "react-icons/vsc";
 import { AiOutlinePlaySquare } from "react-icons/ai";
 import { FiThumbsUp } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../context/authContext";
 
 const LoggedInSidebar = () => {
+  const { logOut } = useContext(AuthContext);
+
   return (
     <div className="sidebar">
       <div>
@@ -52,6 +56,11 @@ const LoggedInSidebar = () => {
             <MdPlaylistAddCheck size={22} />
             <span>Favorites</span>
           </div>
+        </div>
+        <div className="third-sidebar-container">
+          <button onClick={logOut} className="sign-in-header-btn">
+            SIGN OUT
+          </button>
         </div>
       </div>
     </div>

@@ -4,10 +4,16 @@ import { BsCollectionPlay } from "react-icons/bs";
 import { MdOutlineVideoLibrary } from "react-icons/md";
 import { VscHistory } from "react-icons/vsc";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../context/authContext";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const LoggedOutSidebar = () => {
+  const size = useWindowSize();
+  const { logIn } = useContext(AuthContext);
+
   return (
-    <div className="sidebar">
+    <div className={size.width < 1331 ? "sidebar modal" : "sidebar"}>
       <div>
         <div className="first-sidebar-container">
           <Link to="/">
@@ -34,6 +40,13 @@ const LoggedOutSidebar = () => {
             <VscHistory size={22} />
             <span>History</span>
           </div>
+        </div>
+        <div className="third-sidebar-container">
+          <p>Sign in to like videos,</p>
+          <p>comment and subscribe.</p>
+          <button onClick={logIn} className="sign-in-header-btn">
+            SIGN IN
+          </button>
         </div>
       </div>
     </div>
