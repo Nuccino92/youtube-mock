@@ -1,1 +1,1 @@
-React app of a youtube-mock using redux
+React app of a youtube-mock
