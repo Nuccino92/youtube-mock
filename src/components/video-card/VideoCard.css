@@ -1,0 +1,75 @@
+.video-card {
+  cursor: pointer;
+  width: 340px;
+  margin: 15px;
+  flex-shrink: 0;
+}
+
+.video-card > div > img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.video-card-lower-container {
+  display: flex;
+}
+
+.channel-icon-container > img {
+  height: 39px;
+  width: 39px;
+  border-radius: 50%;
+}
+
+.lower-container-info-container {
+  padding: 5px 10px 10px 10px;
+}
+
+.lower-container-info-container > h3 {
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 6px;
+}
+
+.video-card-channel-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(82, 82, 82);
+  letter-spacing: 0.1px;
+  margin-bottom: 6px;
+}
+
+.video-card-count-date-container {
+  display: flex;
+}
+
+.video-card-count-date-container > div {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(82, 82, 82);
+  letter-spacing: 0.1px;
+  margin-right: 7px;
+}
+
+@media (max-width: 600px) {
+  .video-card {
+    width: 200px;
+  }
+  .lower-container-info-container > h3 {
+    font-size: 13px;
+  }
+  .video-card-channel-title {
+    font-size: 11px;
+  }
+
+  .video-card-count-date-container > div {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 300px) {
+  .video-card {
+    width: 150px;
+  }
+}
