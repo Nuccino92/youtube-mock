@@ -1,8 +1,17 @@
-import VideoCard from "../VideoCard";
+import VideoCard from "../video-card/VideoCard";
 import { getPopularVideos, getPopVids } from "../../api/getVideos";
+// import { useEffect, useState } from "react";
 
 const Homepage = () => {
+  // const [popularVideos, setPopularVideos] = useState([]);
   const { items } = getPopVids.data;
+
+  // useEffect(() => {
+  //   const getVideos = async () => {
+  //     setPopularVideos(await getPopularVideos());
+  //   };
+  //   getVideos();
+  // }, []);
 
   return (
     <div className="homepage">
