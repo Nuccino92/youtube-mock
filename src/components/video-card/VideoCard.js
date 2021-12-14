@@ -3,13 +3,14 @@ import { request } from "../../api/request";
 import { getChannelIcon } from "../../api/getChannelIcons";
 import youtubePublishedAt from "../../utils/youtubePublishedAt";
 import youtubeViewCount from "../../utils/youtubeViewCount";
+import youtubeVideoDuration from "../../utils/youtubeVideoDuration";
 
 const VideoCard = ({ info }) => {
   const [channelIcon, setChannelIcon] = useState(undefined);
   const { snippet } = info;
   const publishedAt = youtubePublishedAt(snippet.publishedAt);
   const viewCount = youtubeViewCount(parseFloat(info.statistics.viewCount));
-  console.log(info);
+  const duration = youtubeVideoDuration(info.contentDetails.duration);
 
   useEffect(() => {
     const getIcon = async () => {
@@ -29,6 +30,7 @@ const VideoCard = ({ info }) => {
     <div className="video-card">
       <div>
         <img src={info.snippet.thumbnails.medium.url} alt="thumbnail"></img>
+        <div className="video-card-duration">{duration}</div>
       </div>
 
       <div className="video-card-lower-container">
