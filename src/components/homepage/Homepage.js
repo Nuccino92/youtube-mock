@@ -1,23 +1,39 @@
 import VideoCard from "../video-card/VideoCard";
 import { getPopularVideos, getPopVids } from "../../api/getVideos";
-// import { useEffect, useState } from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { useEffect, useState } from "react";
 
 const Homepage = () => {
-  // const [popularVideos, setPopularVideos] = useState([]);
   const { items } = getPopVids.data;
+  const [homeVideos, setHomeVideos] = useState([]);
 
-  // useEffect(() => {
-  //   const getVideos = async () => {
-  //     setPopularVideos(await getPopularVideos());
-  //   };
-  //   getVideos();
-  // }, []);
+  useEffect(() => {
+    setHomeVideos(items);
+  }, []);
+
+  const getVids = async () => {
+    // let moreVideos = await getPopularVideos();
+    setHomeVideos((prev) => [...prev, ...items]);
+  };
+
+  useEffect(() => {
+    console.log(homeVideos);
+  });
 
   return (
-    <div className="homepage">
-      {items.map((item, index) => {
-        return <VideoCard info={item} key={index} />;
-      })}
+    <div className="homepage" id="scrollableDiv">
+      <InfiniteScroll
+        className="homepage"
+        dataLength={homeVideos.length}
+        next={getVids}
+        hasMore={true}
+        scrollableTarget="scrollableDiv"
+        scrollThreshold={0.92}
+      >
+        {homeVideos.map((item, index) => {
+          return <VideoCard info={item} key={index} />;
+        })}
+      </InfiniteScroll>
     </div>
   );
 };
