@@ -1,0 +1,104 @@
+.watch-screen-video-container {
+  width: 70%;
+  height: 100vh;
+}
+
+/* video container */
+.watch-screen-iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+/* video */
+.watch-screen-iframe-container > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* video title */
+.watch-screen-video-container > h2 {
+  font-size: 20px;
+  color: #030303;
+  padding: 22px 0 16px 0;
+  font-weight: bolder;
+}
+
+/* div below title, with viewcount and likes etc */
+.watch-screen-video-stats-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  font-weight: bolder;
+}
+
+.watch-screen-video-stats-container-left {
+  display: flex;
+}
+
+.watch-screen-video-stats-container-right {
+  display: flex;
+}
+
+/* div with icon container and stats/description container*/
+.watch-screen-video-channel-container {
+  display: flex;
+  padding: 15px 0;
+}
+
+/* channel icon picture */
+.watch-screen-video-channel-container > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* stats/description container w/ sub button */
+.watch-screen-video-channel-stats-inner {
+  padding: 12px 0 12px 12px;
+  width: 100%;
+}
+
+/* channel title */
+.watch-screen-channel-title {
+  font-weight: bolder;
+  font-family: sans-serif;
+  font-size: 16px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  content: attr(title);
+}
+
+/* subcount under title */
+.watch-screen-channel-subcount {
+  padding-bottom: 15px;
+  font-size: 13px;
+  font-weight: bolder;
+  color: grey;
+}
+
+/* description under subcount */
+.watch-screen-description-container {
+  width: 50%;
+  font-weight: bolder;
+  font-size: 13px;
+}
+
+/* sub button */
+.watch-screen-video-channel-stats-inner > button {
+  float: right;
+  cursor: pointer;
+  background-color: rgb(211, 14, 14);
+  color: white;
+  text-shadow: 0px 1px, 1px 0px, 1px 0px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 2px;
+  filter: brightness(1.1);
+}
