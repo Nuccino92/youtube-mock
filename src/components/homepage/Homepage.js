@@ -2,6 +2,7 @@ import VideoCard from "../video-card/VideoCard";
 import { getPopularVideos, getPopVids } from "../../api/getVideos";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   const { items } = getPopVids.data;
@@ -16,10 +17,6 @@ const Homepage = () => {
     setHomeVideos((prev) => [...prev, ...items]);
   };
 
-  useEffect(() => {
-    console.log(homeVideos);
-  });
-
   return (
     <div className="homepage" id="scrollableDiv">
       <InfiniteScroll
@@ -31,7 +28,16 @@ const Homepage = () => {
         scrollThreshold={0.92}
       >
         {homeVideos.map((item, index) => {
-          return <VideoCard info={item} key={index} />;
+          return (
+            <Link
+              key={index}
+              to={`/watch/${item.id}`}
+              state={item}
+              className="video-card-link"
+            >
+              <VideoCard info={item} key={index} />
+            </Link>
+          );
         })}
       </InfiniteScroll>
     </div>
