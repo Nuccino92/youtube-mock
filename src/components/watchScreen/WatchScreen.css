@@ -1,0 +1,25 @@
+.watch-screen {
+  overflow: hidden;
+  overflow-y: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 800px;
+}
+
+.watch-screen::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+}
+
+.watch-screen::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.watch-screen::-webkit-scrollbar-thumb {
+  background: #777777;
+  border-radius: 12px;
+}
+
+.watch-screen:hover::-webkit-scrollbar-thumb {
+  background: #6e6e6e;
+}
