@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { request } from "../../api/request";
 import { getChannelIcon } from "../../api/getChannelIcons";
 import youtubePublishedAt from "../../utils/youtubePublishedAt";
 import youtubeViewCount from "../../utils/youtubeViewCount";
@@ -18,13 +17,6 @@ const VideoCard = ({ info }) => {
     };
     getIcon();
   }, [snippet]);
-
-  // useEffect(() => {
-  //   const getVideos = async () => {
-  //     setPopularVideos(await getPopularVideos());
-  //   };
-  //   getVideos();
-  // }, []);
 
   return (
     <div className="video-card">
