@@ -4,6 +4,8 @@
 @import "./components/sidebar/Sidebar.css";
 @import "./components/sidebar/SidebarSmall.css";
 @import "./components/video-card/VideoCard.css";
+@import "./components/watchScreen/WatchScreen.css";
+@import "./components/watchScreen/watch-screen-video-container/WatchScreenVideoContainer.css";
 
 * {
   margin: 0;
