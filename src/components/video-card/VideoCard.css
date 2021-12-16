@@ -1,7 +1,10 @@
+.video-card-link {
+  margin: 15px 7px 15px 7px;
+}
+
 .video-card {
   cursor: pointer;
   width: 340px;
-  margin: 15px;
   flex-shrink: 0;
   position: relative;
 }
