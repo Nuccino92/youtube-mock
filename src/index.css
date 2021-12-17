@@ -6,6 +6,9 @@
 @import "./components/video-card/VideoCard.css";
 @import "./components/watchScreen/WatchScreen.css";
 @import "./components/watchScreen/watch-screen-video-container/WatchScreenVideoContainer.css";
+@import "./components/watchScreen/watch-screen-video-list/WatchScreenVideoList.css";
+@import "./components/watchScreen/watch-screen-comments/WatchScreenComments.css";
+@import "./components/watchScreen/watch-screen-comments/Comment.css";
 
 * {
   margin: 0;
