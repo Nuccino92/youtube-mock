@@ -32,18 +32,18 @@ const checkGreaterThanAWeek = (vidDate, todaysDate) => {
 
 const checkGreaterThanADay = (vidDate, todaysDate) => {
   let days = Math.round((todaysDate - vidDate) / (24 * 60 * 60 * 1000));
-
+  if (days === 0) return checkGreaterThanAnHour(vidDate, todaysDate);
   if (days === 1) {
-    return `${days} week ago`;
+    return `${days} day ago`;
   } else if (days > 1) {
-    return `${days} weeks ago`;
-  } else return false;
+    return `${days} days ago`;
+  } else return;
 };
 
 const checkGreaterThanAnHour = (vidDate, todaysDate) => {
   let hours = Math.round((todaysDate - vidDate) / (60 * 60 * 1000));
 
-  if (hours === 1) {
+  if (hours <= 1) {
     return `${hours} hour ago`;
   } else if (hours > 1) {
     return `${hours} hours ago`;
@@ -65,13 +65,12 @@ const youtubePublishedAt = (date) => {
     return checkGreaterThanAMonth(vidDate, todaysDate);
   }
   //if greater than a week return how many
-  else if (checkGreaterThanAWeek(vidDate, todaysDate))
+  else if (checkGreaterThanAWeek(vidDate, todaysDate)) {
     return checkGreaterThanAWeek(vidDate, todaysDate);
+  }
   //if greater than a day return how many
   else if (checkGreaterThanADay) {
     return checkGreaterThanADay(vidDate, todaysDate);
   }
-  //finally if greater than an hour return how many
-  else return checkGreaterThanAnHour(vidDate, todaysDate);
 };
 export default youtubePublishedAt;
