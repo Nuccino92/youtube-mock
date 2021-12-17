@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { getChannelIcon } from "../../api/getChannelIcons";
 import { getChannelSubs } from "../../api/getChannelSubs";
-import WatchScreenComments from "./WatchScreenComments";
+import WatchScreenComments from "./watch-screen-comments/WatchScreenComments";
 import WatchScreenVideoContainer from "./watch-screen-video-container/WatchScreenVideoContainer";
-import useWindowSize from "../../hooks/useWindowSize";
+// import useWindowSize from "../../hooks/useWindowSize";
+import WatchScreenVideoList from "./watch-screen-video-list/WatchScreenVideoList";
 
 const WatchScreen = () => {
   const [channelIcon, setChannelIcon] = useState(undefined);
@@ -12,7 +13,9 @@ const WatchScreen = () => {
   const location = useLocation();
   const { state } = location;
   const { snippet } = state;
-  const size = useWindowSize();
+  const { statistics } = state;
+
+  // const size = useWindowSize();
   // size 1000
 
   useEffect(() => {
@@ -30,7 +33,11 @@ const WatchScreen = () => {
         channelIcon={channelIcon}
         channelSubs={channelSubs}
       />
-      <WatchScreenComments item={state} />
+      <WatchScreenVideoList />
+      <WatchScreenComments
+        commentCount={statistics.commentCount}
+        item={state}
+      />
     </div>
   );
 };
