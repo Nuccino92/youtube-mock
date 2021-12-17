@@ -1,0 +1,47 @@
+.watch-screen-comments {
+  width: 73%;
+  /* border: 1px solid black; */
+}
+
+.watch-screen-comments-upper-container {
+  padding: 24px 0;
+}
+
+.watch-screen-comments-upper-container > span {
+  margin-right: 20px;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.add-comment-container {
+  display: flex;
+}
+
+.add-comment-container > img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.add-comment-container > textarea {
+  resize: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgb(214, 214, 214);
+  font-size: 15px;
+  font-weight: bolder;
+  overflow: hidden;
+  height: 25px;
+}
+.add-comment-container > textarea:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 1000px) {
+  .watch-screen-comments {
+    width: 98%;
+  }
+}
