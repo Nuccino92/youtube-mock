@@ -1,0 +1,53 @@
+.comments {
+  display: flex;
+  margin: 25px 0;
+}
+
+/* comment profile picture */
+.comments > img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+/* container for all info*/
+.comments-info-container {
+  padding: 7px 0 0 13px;
+}
+
+/* comment author */
+.comments-info-container > div > h4 {
+  font-size: 14px;
+  font-family: sans-serif;
+  padding: 0 5px 9px 0;
+  cursor: pointer;
+}
+
+/* comment date posted */
+.comments-info-container > div > span {
+  font-family: sans-serif;
+  color: grey;
+  font-size: 12px;
+  align-self: center;
+  padding: 0 5px 9px 0;
+}
+
+.comments-comment {
+  font-size: 14px;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+.comment-icon {
+  font-weight: lighter;
+  font-size: 17px;
+  vertical-align: middle;
+}
+
+.comments-info-container > span {
+  font-weight: bolder;
+  margin-right: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
