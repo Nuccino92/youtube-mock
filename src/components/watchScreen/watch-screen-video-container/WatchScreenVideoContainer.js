@@ -5,8 +5,11 @@ import { BiLike, BiDislike } from "react-icons/bi";
 import { TiArrowForwardOutline } from "react-icons/ti";
 import { RiPlayListAddFill } from "react-icons/ri";
 import { BsThreeDots } from "react-icons/bs";
+import { useState } from "react";
 
 const WatchScreenVideoContainer = ({ state, channelIcon, channelSubs }) => {
+  const [showMore, setShowMore] = useState(false);
+
   const { snippet } = state;
   const { statistics } = state;
 
@@ -31,34 +34,39 @@ const WatchScreenVideoContainer = ({ state, channelIcon, channelSubs }) => {
 
       <div className="watch-screen-video-stats-container">
         <div className="watch-screen-video-stats-container-left">
-          <div>{viewCount}</div>
-          <div>&#8226;{publishedAt}</div>
+          <span>{viewCount} views </span>
+          <span>&#8226; {publishedAt}</span>
         </div>
         <div className="watch-screen-video-stats-container-right">
-          <div>
-            {" "}
-            <BiLike />
+          <span title="i like this">
+            <BiLike className="watch-screen-icons" />
             {likeCount}
-          </div>
-          <div>
-            <BiDislike />
+          </span>
+          <span title="i dislike this">
+            <BiDislike className="watch-screen-icons" />
             {dislikeCount}
-          </div>
-          <div>
-            <TiArrowForwardOutline />
-            share
-          </div>
-          <div>
-            <RiPlayListAddFill />
-            save
-          </div>
-          <div>
-            <BsThreeDots />
-          </div>
+          </span>
+          <span title="Share">
+            <TiArrowForwardOutline className="watch-screen-icons" />
+            SHARE
+          </span>
+          <span title="Save">
+            <RiPlayListAddFill className="watch-screen-icons" />
+            SAVE
+          </span>
+          <span>
+            <BsThreeDots className="watch-screen-icons" />
+          </span>
         </div>
       </div>
 
-      <div className="watch-screen-video-channel-container">
+      <div
+        className={
+          showMore
+            ? "watch-screen-video-channel-container read-more"
+            : "watch-screen-video-channel-container"
+        }
+      >
         <img src={channelIcon} alt="watch-screen-channel-icon"></img>
         <div className="watch-screen-video-channel-stats-inner">
           <button>SUBSCRIBE</button>
@@ -73,10 +81,17 @@ const WatchScreenVideoContainer = ({ state, channelIcon, channelSubs }) => {
           </div>
           <div className="watch-screen-description-container">
             <div>{snippet.description}</div>
+            <div
+              className="show-more-btn"
+              onClick={() => setShowMore(!showMore)}
+            >
+              {showMore ? "SHOW LESS" : "SHOW MORE"}
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 export default WatchScreenVideoContainer;
