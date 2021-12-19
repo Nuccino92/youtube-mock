@@ -1,5 +1,5 @@
 .watch-screen-video-container {
-  width: 73%;
+  width: 70%;
 }
 
 /* video container */
@@ -78,6 +78,7 @@
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .watch-screen-video-channel-container.read-more {
@@ -155,7 +156,7 @@
   filter: brightness(1.1);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1571px) {
   .watch-screen-video-container {
     width: 98%;
   }
