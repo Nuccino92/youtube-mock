@@ -9,6 +9,7 @@
 @import "./components/watchScreen/watch-screen-video-list/WatchScreenVideoList.css";
 @import "./components/watchScreen/watch-screen-comments/WatchScreenComments.css";
 @import "./components/watchScreen/watch-screen-comments/Comment.css";
+@import "./components/search-screen/SearchScreen.css";
 
 * {
   margin: 0;
@@ -21,4 +22,22 @@
 html,
 body {
   overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #777777;
+  border-radius: 12px;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background: #6e6e6e;
 }

@@ -7,21 +7,3 @@
   justify-content: center;
   height: 900px;
 }
-
-.homepage::-webkit-scrollbar {
-  width: 10px;
-  border-radius: 5px;
-}
-
-.homepage::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.homepage::-webkit-scrollbar-thumb {
-  background: #777777;
-  border-radius: 12px;
-}
-
-.homepage:hover::-webkit-scrollbar-thumb {
-  background: #6e6e6e;
-}
