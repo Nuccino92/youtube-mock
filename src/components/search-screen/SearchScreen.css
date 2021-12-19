@@ -1,0 +1,145 @@
+/* search screen context */
+.search-screen {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: auto;
+  border: 1px solid black;
+  padding: 20px 40px;
+  height: 900px;
+}
+
+/* filter section of the search screen */
+.search-screen-filter-container {
+  font-size: 19px;
+  border-bottom: 1px solid rgb(202, 202, 202);
+  padding-bottom: 6px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  font-weight: bolder;
+  color: rgb(70, 70, 70);
+  width: 900px;
+}
+
+/* icon beside filter */
+.search-screen-icon {
+  margin-right: 10px;
+  vertical-align: bottom;
+  font-size: 21px;
+}
+
+/* each rendered video container */
+.search-screen-card {
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 18px;
+  width: 900px;
+  align-self: center;
+}
+
+/* thumbnail in container */
+.search-screen-thumbnail-container > img {
+  width: 360px;
+  height: 190px;
+}
+
+/* container with text beside thumbnail */
+.search-screen-card-info-container {
+  padding: 7px 14px;
+}
+
+/* title */
+.search-screen-card-info-container > h2 {
+  font-size: 18px;
+  margin-bottom: 1px;
+}
+
+/* views and published at */
+.search-screen-card-info-container > span {
+  font-family: sans-serif;
+  font-size: 13px;
+  color: rgb(102, 102, 102);
+}
+
+/* container for profile picture and channel title */
+.search-screen-card-channel-container {
+  display: flex;
+  margin: 13px 0;
+}
+
+/* profile picture */
+.search-screen-card-channel-container > img {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+/* channel title */
+.search-screen-card-channel-container > div {
+  font-family: sans-serif;
+  font-size: 13px;
+  color: rgb(102, 102, 102);
+  align-self: center;
+}
+
+/* video description */
+.search-screen-card-description {
+  font-family: sans-serif;
+  font-size: 13px;
+  color: rgb(102, 102, 102);
+}
+
+@media (max-width: 1144px) {
+  .search-screen-filter-container {
+    width: 500px;
+  }
+
+  .search-screen-thumbnail-container > img {
+    width: 240px;
+    height: 120px;
+  }
+
+  .search-screen-card {
+    width: 500px;
+  }
+  .search-screen-card-info-container > h2 {
+    font-size: 14px;
+  }
+
+  /* views and published at */
+  .search-screen-card-info-container > span {
+    font-size: 11px;
+  }
+
+  /* container for profile picture and channel title */
+  .search-screen-card-channel-container {
+    margin: 9px 0;
+  }
+
+  /* profile picture */
+  .search-screen-card-channel-container > img {
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    margin-right: 7px;
+  }
+
+  /* channel title */
+  .search-screen-card-channel-container > div {
+    font-size: 11px;
+  }
+
+  /* video description */
+  .search-screen-card-description {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  .search-screen-card {
+    flex-direction: column;
+    width: min-content;
+  }
+}
