@@ -5,7 +5,6 @@
   flex-wrap: wrap;
   justify-content: center;
   overflow-y: auto;
-  border: 1px solid black;
   padding: 20px 40px;
   height: 900px;
 }
@@ -19,7 +18,7 @@
   font-size: 15px;
   font-weight: bolder;
   color: rgb(70, 70, 70);
-  width: 900px;
+  width: 1100px;
 }
 
 /* icon beside filter */
@@ -34,7 +33,7 @@
   cursor: pointer;
   display: flex;
   margin-bottom: 18px;
-  width: 900px;
+  width: 1100px;
   align-self: center;
 }
 
