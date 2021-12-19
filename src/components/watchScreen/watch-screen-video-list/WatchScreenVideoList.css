@@ -1,0 +1,9 @@
+.watch-screen-video-list {
+  border: 1px solid black;
+  float: right;
+  flex-grow: 1;
+}
+
+.watch-screen-video-list > div {
+  width: 200px;
+}
