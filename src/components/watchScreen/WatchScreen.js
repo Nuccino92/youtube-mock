@@ -33,7 +33,7 @@ const WatchScreen = () => {
         channelIcon={channelIcon}
         channelSubs={channelSubs}
       />
-      <WatchScreenVideoList />
+      <WatchScreenVideoList state={state} />
       <WatchScreenComments
         commentCount={statistics.commentCount}
         item={state}
