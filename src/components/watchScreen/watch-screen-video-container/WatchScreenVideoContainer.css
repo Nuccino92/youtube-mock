@@ -76,15 +76,11 @@
   border-top: 1px solid rgb(212, 212, 212);
   height: 200px;
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 30px;
 }
 
 .watch-screen-video-channel-container.read-more {
   height: max-content;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .show-more-btn {
