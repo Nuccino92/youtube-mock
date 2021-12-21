@@ -8,6 +8,7 @@
   justify-content: space-between;
 }
 
+/* menu and icon container */
 .left-header-container {
   display: flex;
   align-items: center;
@@ -15,6 +16,7 @@
   margin-left: 10px;
 }
 
+/* hamburger icon */
 .header-menu-icon {
   cursor: pointer;
   margin-right: 10px;
@@ -26,6 +28,7 @@
   background-color: rgb(228, 228, 228);
 }
 
+/* youtube logo */
 .youtube-menu-icon {
   height: 70%;
   width: 70%;
@@ -37,6 +40,7 @@
   content: attr(title);
 }
 
+/* search bar container */
 .search-bar-container {
   display: flex;
   align-items: center;
@@ -44,6 +48,7 @@
   width: 37%;
 }
 
+/* border to wrap search bar */
 .search-bar-border {
   border: 0.7px solid rgb(204, 204, 204);
   display: flex;
@@ -92,12 +97,14 @@
   margin-left: 20px;
 }
 
+/* container for everything right of search bar */
 .right-header-container {
   display: flex;
   margin-right: 20px;
   justify-content: center;
   align-content: center;
 }
+
 /* spaces all the children evenly */
 .right-header-container > * {
   margin: 5px 15px;
@@ -112,6 +119,7 @@
   background-color: rgb(228, 228, 228);
 }
 
+/* sign in button */
 .sign-in-header-btn {
   border: none;
   outline: 1px solid rgb(6, 95, 212);
@@ -122,8 +130,10 @@
   padding: 10px 20px;
   font-weight: 600;
   background-color: white;
+  white-space: nowrap;
 }
 
+/* logged in profile picture */
 .profile-picture {
   height: 32px;
   width: 32px;
