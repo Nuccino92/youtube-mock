@@ -10,6 +10,7 @@
 @import "./components/watchScreen/watch-screen-comments/WatchScreenComments.css";
 @import "./components/watchScreen/watch-screen-comments/Comment.css";
 @import "./components/search-screen/SearchScreen.css";
+@import "./components/logged-in-package/header/ProfileDropdown.css";
 
 * {
   margin: 0;
