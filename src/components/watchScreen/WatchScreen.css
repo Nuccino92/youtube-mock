@@ -1,12 +1,10 @@
 .watch-screen {
-  display: flex;
   overflow: hidden;
   overflow-y: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 20px 20px;
-  justify-content: center;
-  height: 1000px;
   justify-content: start;
+  height: 1000px;
 }
