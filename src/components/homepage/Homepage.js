@@ -1,20 +1,23 @@
 import VideoCard from "../video-card/VideoCard";
-import { getPopularVideos, getPopVids } from "../../api/getVideos";
+import { getPopularVideos } from "../../api/getPopularVideos";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
-  const { items } = getPopVids.data;
   const [homeVideos, setHomeVideos] = useState([]);
 
   useEffect(() => {
-    setHomeVideos(items);
+    const loadVideos = async () => {
+      setHomeVideos(await getPopularVideos());
+    };
+
+    loadVideos();
   }, []);
 
   const getVids = async () => {
-    // let moreVideos = await getPopularVideos();
-    setHomeVideos((prev) => [...prev, ...items]);
+    let moreVideos = await getPopularVideos();
+    setHomeVideos((prev) => [...prev, ...moreVideos]);
   };
 
   return (
