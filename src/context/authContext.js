@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { onAuthStateChanged } from "@firebase/auth";
 import { provider, auth } from "../firebase/firebaseAuth";
-import { signInWithPopup, signOut, GoogleAuthProvider } from "@firebase/auth";
+import { signInWithPopup, signOut } from "@firebase/auth";
 
 const AuthContext = React.createContext();
 
@@ -23,9 +23,6 @@ const AuthContextProvider = (props) => {
   const logIn = () => {
     signInWithPopup(auth, provider)
       .then((res) => {
-        // const credential = GoogleAuthProvider.credentialFromResult(res);
-        // console.log(credential);
-        // const token = credential.accessToken;
         setUser(res.user);
       })
       .catch((err) => {
@@ -35,20 +32,16 @@ const AuthContextProvider = (props) => {
 
   useEffect(() => {
     if (user === null) return;
+
     // stores user info into session in order to keep user info upon page refresh
     sessionStorage.setItem("user-profile", JSON.stringify(user));
+
     setProfile({
       name: user.displayName,
       email: user.email,
       photo: user.photoURL,
     });
   }, [user]);
-
-  useEffect(() => {
-    console.log(profile);
-    console.log(user);
-  }, [profile]);
-  // //
 
   const logOut = () => {
     signOut(auth).catch((error) => {
