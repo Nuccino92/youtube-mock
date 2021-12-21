@@ -44,7 +44,7 @@ const WatchScreenVideoContainer = ({ state, channelIcon, channelSubs }) => {
           </span>
           <span title="i dislike this">
             <BiDislike className="watch-screen-icons" />
-            {dislikeCount}
+            DISLIKE
           </span>
           <span title="Share">
             <TiArrowForwardOutline className="watch-screen-icons" />
