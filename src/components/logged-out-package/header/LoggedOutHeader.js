@@ -1,13 +1,33 @@
 import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { TiMicrophone } from "react-icons/ti";
 import { BsGrid3X3Gap, BsThreeDotsVertical } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import youtubeIcon from "/home/anthony/the_odin_project/youtube-mock/src/components/header/youtube-icon.png";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../context/authContext";
 
 const LoggedOutHeader = ({ handleSidebar }) => {
   const { logIn } = useContext(AuthContext);
+  const [input, setInput] = useState("");
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setInput(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`search/${input}`);
+  };
+
+  // const onKeyDown = (e) => {
+  //   if (e.key === "Enter") {
+  //     e.preventDefault();
+  //     e.stopPropagation();
+  //     handleSubmit(e);
+  //   }
+  // };
+
   return (
     <div className="header">
       <div className="left-header-container">
@@ -35,8 +55,14 @@ const LoggedOutHeader = ({ handleSidebar }) => {
             type="text"
             name="search-bar"
             className="search-bar"
+            onChange={(e) => handleChange(e)}
+            // onKeyDown={(e) => onKeyDown(e)}
           ></input>
-          <div className="search-icon-container" title="search">
+          <div
+            onClick={(e) => handleSubmit(e)}
+            className="search-icon-container"
+            title="search"
+          >
             <AiOutlineSearch size={28} className="search-icon" />
           </div>
         </div>
