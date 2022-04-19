@@ -2,7 +2,7 @@ import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { TiMicrophone } from "react-icons/ti";
 import { BsGrid3X3Gap, BsThreeDotsVertical } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
-import youtubeIcon from "/home/anthony/the_odin_project/youtube-mock/src/components/header/youtube-icon.png";
+import youtubeIcon from "../../header/youtube-icon.png";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../context/authContext";
 
@@ -19,14 +19,6 @@ const LoggedOutHeader = ({ handleSidebar }) => {
     e.preventDefault();
     navigate(`search/${input}`);
   };
-
-  // const onKeyDown = (e) => {
-  //   if (e.key === "Enter") {
-  //     e.preventDefault();
-  //     e.stopPropagation();
-  //     handleSubmit(e);
-  //   }
-  // };
 
   return (
     <div className="header">
@@ -56,7 +48,6 @@ const LoggedOutHeader = ({ handleSidebar }) => {
             name="search-bar"
             className="search-bar"
             onChange={(e) => handleChange(e)}
-            // onKeyDown={(e) => onKeyDown(e)}
           ></input>
           <div
             onClick={(e) => handleSubmit(e)}

@@ -3,13 +3,14 @@ import {
   AiOutlineSearch,
   AiOutlineVideoCameraAdd,
 } from "react-icons/ai";
+
 import { TiMicrophone } from "react-icons/ti";
 import { BsGrid3X3Gap } from "react-icons/bs";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../../context/authContext";
-import youtubeIcon from "/home/anthony/the_odin_project/youtube-mock/src/components/header/youtube-icon.png";
+import youtubeIcon from "../../header/youtube-icon.png";
 import ProfileDropdown from "./ProfileDropdown";
 
 const LoggedInHeader = ({ handleSidebar }) => {
