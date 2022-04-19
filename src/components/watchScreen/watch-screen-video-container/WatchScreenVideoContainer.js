@@ -14,7 +14,6 @@ const WatchScreenVideoContainer = ({ state, channelIcon, channelSubs }) => {
   const { statistics } = state;
 
   const likeCount = youtubeViewCount(statistics.likeCount);
-  const dislikeCount = youtubeViewCount(statistics.dislikeCount);
   const subCount = youtubeViewCount(channelSubs);
   const viewCount = numberWithCommas(statistics.viewCount);
   const publishedAt = getDate(snippet.publishedAt);
@@ -60,13 +59,7 @@ const WatchScreenVideoContainer = ({ state, channelIcon, channelSubs }) => {
         </div>
       </div>
 
-      <div
-        className={
-          showMore
-            ? "watch-screen-video-channel-container read-more"
-            : "watch-screen-video-channel-container"
-        }
-      >
+      <div className={"watch-screen-video-channel-container"}>
         <img src={channelIcon} alt="watch-screen-channel-icon"></img>
         <div className="watch-screen-video-channel-stats-inner">
           <button>SUBSCRIBE</button>
@@ -79,7 +72,13 @@ const WatchScreenVideoContainer = ({ state, channelIcon, channelSubs }) => {
           <div className="watch-screen-channel-subcount">
             {subCount} subscribers
           </div>
-          <div className="watch-screen-description-container">
+          <div
+            className={
+              showMore
+                ? "watch-screen-description-container read-more"
+                : "watch-screen-description-container"
+            }
+          >
             <div>{snippet.description}</div>
             <div
               className="show-more-btn"
