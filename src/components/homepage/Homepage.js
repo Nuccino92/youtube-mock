@@ -29,6 +29,9 @@ const Homepage = () => {
         hasMore={true}
         scrollableTarget="scrollableDiv"
         scrollThreshold={0.92}
+        style={{
+          border: "none",
+        }}
       >
         {homeVideos.map((item, index) => {
           return (
