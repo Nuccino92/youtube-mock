@@ -11,6 +11,7 @@ const WatchScreenVideoCard = ({ info }) => {
 
   useEffect(() => {
     loadVideos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadVideos = async () => {
