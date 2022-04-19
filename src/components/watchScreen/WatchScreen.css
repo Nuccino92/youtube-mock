@@ -5,6 +5,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 20px 20px;
-  justify-content: start;
-  height: 1000px;
+  justify-content: flex-start;
+  height: 100vh;
+  background-color: rgba(243, 241, 241, 0.299);
 }
