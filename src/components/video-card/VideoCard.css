@@ -45,27 +45,34 @@
 
 .lower-container-info-container > h3 {
   font-size: 16px;
-  font-weight: bolder;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
   margin-bottom: 6px;
+  text-overflow: ellipsis;
+  text-decoration-thickness: auto;
+  text-decoration-style: solid;
+  line-height: 22px;
+  color: rgb(3, 3, 3);
 }
 
 .video-card-channel-title {
   font-size: 14px;
-  font-weight: bold;
-  color: rgb(82, 82, 82);
+  font-weight: 400;
+  color: rgb(96, 96, 96);
   letter-spacing: 0.1px;
   margin-bottom: 6px;
 }
 
 .video-card-count-date-container {
   display: flex;
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .video-card-count-date-container > div {
   font-size: 14px;
-  font-weight: bold;
-  color: rgb(82, 82, 82);
+  font-weight: 400;
+  color: rgb(96, 96, 96);
   letter-spacing: 0.1px;
   margin-right: 7px;
 }
