@@ -3,7 +3,9 @@
   overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 20px;
+  padding: 5px 0;
   justify-content: center;
-  height: 900px;
+  height: 100vh;
+  background-color: rgba(243, 241, 241, 0.299);
+  border-top: 1px solid rgb(228, 228, 228);
 }
