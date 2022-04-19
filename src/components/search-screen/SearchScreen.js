@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { getPopVids } from "../../api/getPopularVideos";
 import SearchCard from "./SearchCard";
 import { CgFormatLineHeight } from "react-icons/cg";
 import InfiniteScroll from "react-infinite-scroll-component";
