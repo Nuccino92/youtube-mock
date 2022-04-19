@@ -23,16 +23,17 @@
   font-size: 19px;
   color: #030303;
   padding: 22px 0 16px 0;
-  font-weight: bolder;
-  text-shadow: -0.4px 0 black, 0 0.4px black, 0.4px 0 black, 0 -0.4px black;
+  font-weight: 400;
 }
 
 /* div below title, with viewcount and likes etc */
 .watch-screen-video-stats-container {
   display: flex;
   justify-content: space-between;
-  font-weight: bolder;
+  font-weight: 400;
   padding-bottom: 13px;
+  color: rgb(96, 96, 96);
+  font-size: 14px;
 }
 
 .watch-screen-video-stats-container-left {
@@ -62,7 +63,8 @@
   align-content: center;
   font-weight: bolder;
   font-family: sans-serif;
-  font-size: 15.7px;
+  font-size: 14px;
+  font-weight: 400;
   color: rgb(95, 95, 95);
   content: attr(title);
 }
@@ -74,27 +76,18 @@
   padding: 15px 0;
   border-bottom: 1px solid rgb(212, 212, 212);
   border-top: 1px solid rgb(212, 212, 212);
-  height: 200px;
   overflow: hidden;
   margin-bottom: 30px;
-}
-
-.watch-screen-video-channel-container.read-more {
-  height: max-content;
 }
 
 .show-more-btn {
   position: absolute;
   bottom: 0;
-  font-size: 20px;
+  font-size: 12px;
   font-family: sans-serif;
-  font-size: 15px;
   color: rgb(124, 124, 124);
   width: 100%;
   cursor: pointer;
-  margin-top: 20px;
-  background: white;
-  padding: 27px 0 12px 0;
 }
 
 /* channel icon picture */
@@ -113,10 +106,11 @@
 
 /* channel title */
 .watch-screen-channel-title {
-  font-weight: bolder;
+  font-weight: 600;
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   padding-bottom: 5px;
+  color: rgb(3, 3, 3);
   cursor: pointer;
   content: attr(title);
   width: max-content;
@@ -126,15 +120,22 @@
 .watch-screen-channel-subcount {
   padding-bottom: 15px;
   font-size: 13px;
-  font-weight: bolder;
-  color: grey;
+  font-weight: 400;
+  color: rgb(96, 96, 96);
 }
 
 /* description under subcount */
 .watch-screen-description-container {
   width: 50%;
-  font-weight: bolder;
-  font-size: 13px;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(96, 96, 96);
+  overflow: hidden;
+  height: 49px;
+}
+
+.read-more {
+  height: max-content;
 }
 
 /* sub button */
@@ -143,13 +144,12 @@
   cursor: pointer;
   background-color: rgb(211, 14, 14);
   color: white;
-  text-shadow: 0px 1px, 1px 0px, 1px 0px;
   letter-spacing: 1px;
   font-size: 14px;
   border: none;
   padding: 10px 14px;
   border-radius: 2px;
-  filter: brightness(1.1);
+  font-weight: 600;
 }
 
 @media (max-width: 1571px) {

@@ -18,7 +18,8 @@
 
 /* comment author */
 .comments-info-container > div > h4 {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
   font-family: sans-serif;
   padding: 0 5px 9px 0;
   cursor: pointer;
@@ -35,7 +36,7 @@
 
 .comments-comment {
   font-size: 14px;
-  font-weight: bolder;
+  font-weight: 400;
   padding-bottom: 10px;
 }
 
@@ -46,8 +47,8 @@
 }
 
 .comments-info-container > span {
-  font-weight: bolder;
+  font-weight: 400;
   margin-right: 20px;
-  font-size: 13px;
+  font-size: 12px;
   cursor: pointer;
 }
