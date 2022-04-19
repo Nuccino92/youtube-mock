@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&family=Roboto&display=swap");
 @import "./components/header/Header.css";
 @import "./components/homepage/Homepage.css";
 @import "./components/sidebar/Sidebar.css";
@@ -15,7 +15,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   text-decoration: none;
   color: black;
 }
@@ -41,4 +41,9 @@ body {
 
 *:hover::-webkit-scrollbar-thumb {
   background: #6e6e6e;
+}
+
+::placeholder {
+  font-weight: 400;
+  font-size: 15px;
 }
